@@ -5,5 +5,6 @@ class Square :
 {
 public:
 	Square(int posx, int posy, int sizex, int sizey);
+	void Draw(void);
 };
 

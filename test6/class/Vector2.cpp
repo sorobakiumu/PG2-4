@@ -6,6 +6,8 @@ Vector2::Vector2()
 	y_ = 0;
 }
 
-Vector2::Vector2(int x, int y):x_(x),y_(y)
+Vector2::Vector2(int x, int y)
 {
+	x_ = x;
+	y_ = y;
 }
