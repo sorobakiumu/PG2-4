@@ -1,6 +1,6 @@
 #include<DxLib.h>
 #include"_debug/_DebugDispOut.h"
-#include"class/Shape.h"
+#include"class/Square.h"
 
 bool sysInit() {
 	SetGraphMode(800, 600, 32);
@@ -24,12 +24,12 @@ int WINAPI WinMain(HINSTANCE inst, HINSTANCE prev, LPSTR, int)
 	x /= 2;
 	y /= 2;
 	int flame = 0;
-	Shape shape;
+	Shape* shape = new Square(100,200,50,50);
 	while (ProcessMessage() == 0&&CheckHitKey(KEY_INPUT_ESCAPE)==0) {
 		_dbgStartDraw();
 		flame++;
 
-		shape.Draw();
+		shape->Draw();
 		_dbgDraw();
 		ScreenFlip();
 		ClsDrawScreen();

@@ -2,11 +2,12 @@
 class Shape
 {
 public:
-	int posx_ = 0;
-	int posy_ = 0;
-	int size_x_ = 100;
-	int size_y_ = 100;
-	Shape();
+	Shape(int posx, int posy, int sizex, int sizey);
 	void Draw(void);
+protected:
+	int posx_;
+	int posy_;
+	int size_x_;
+	int size_y_;
 };
 
