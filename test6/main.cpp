@@ -19,15 +19,15 @@ int WINAPI WinMain(HINSTANCE inst, HINSTANCE prev, LPSTR, int)
 	if (!sysInit()) {
 		return 0;
 	}
-	Shape* shape1 = new Square({ 100, 200 }, { 50, 50 });
-	Shape* shape2 = new Shape ({ 100, 300 }, { 50, 50 });
-	Shape* shape3 = new Shape ({ 100, 400 }, { 50, 50 });
-	while (ProcessMessage() == 0&&CheckHitKey(KEY_INPUT_ESCAPE)==0) {
+	Square* shape1 = new Square({ 400.0, 300.0}, { 50, 50 });
+	float angle = 0;
+	while (ProcessMessage() == 0 && CheckHitKey(KEY_INPUT_ESCAPE) == 0) {
 		_dbgStartDraw();
 
+		angle += 0.001;
+		shape1->Draw(2.0f, {-0.5,-0.5}, { 0, 0}, angle,0xffffff);
 		shape1->Draw();
-		((Square*)shape2)->Draw();
-		shape3->Draw();
+		shape1->Draw(0.5f, { 0.25,0.25 }, { 0, 0 }, -angle, 0xaaaaff);
 
 		_dbgDraw();
 		ScreenFlip();

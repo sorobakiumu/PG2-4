@@ -2,7 +2,7 @@
 #include "Shape.h"
 #include "Vector2.h"
 
-Shape::Shape(Vector2 pos, Vector2 size)
+Shape::Shape(Vector2<float> pos, Vector2<int> size)
 {
 	pos_ = pos;
 	size_ = size;
@@ -10,5 +10,5 @@ Shape::Shape(Vector2 pos, Vector2 size)
 
 void Shape::Draw(void)
 {
-	DrawBox(pos_.x, pos_.y, pos_.x+size_.x,pos_.y + size_.y, 0xffaaaa, true);
+	DrawBox(pos_.x, pos_.y, pos_.x+size_.x,pos_.y + size_.y, 0xffffff, true);
 }
