@@ -1,10 +1,13 @@
 #pragma once
 #include "Shape.h"
+
+class Vector2;
+
 class Square :
 	public Shape
 {
 public:
-	Square(int posx, int posy, int sizex, int sizey);
+	Square(Vector2 pos, Vector2 size);
 	void Draw(void);
 };
 

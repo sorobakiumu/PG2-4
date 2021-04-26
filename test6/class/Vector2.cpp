@@ -2,12 +2,12 @@
 
 Vector2::Vector2()
 {
-	x_ = 0;
-	y_ = 0;
+	x = 0;
+	y = 0;
 }
 
 Vector2::Vector2(int x, int y)
 {
-	x_ = x;
-	y_ = y;
+	Vector2::x = x;
+	Vector2::y = y;
 }

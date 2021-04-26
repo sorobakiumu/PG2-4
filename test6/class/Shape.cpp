@@ -1,15 +1,14 @@
 #include<DxLib.h>
 #include "Shape.h"
+#include "Vector2.h"
 
-Shape::Shape(int posx,int posy,int sizex,int sizey)
+Shape::Shape(Vector2 pos, Vector2 size)
 {
-	posx_ = posx;
-	posy_ = posy;
-	size_x_ = sizex;
-	size_y_ = sizey;
+	pos_ = pos;
+	size_ = size;
 }
 
 void Shape::Draw(void)
 {
-	DrawBox(posx_, posy_, posx_+size_x_,posy_ + size_y_, 0xffaaaa, true);
+	DrawBox(pos_.x, pos_.y, pos_.x+size_.x,pos_.y + size_.y, 0xffaaaa, true);
 }

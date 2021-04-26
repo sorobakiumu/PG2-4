@@ -1,13 +1,13 @@
 #pragma once
+#include "Vector2.h"
+
 class Shape
 {
 public:
-	Shape(int posx, int posy, int sizex, int sizey);
+	Shape(Vector2 pos, Vector2 size);
 	void Draw(void);
 protected:
-	int posx_;
-	int posy_;
-	int size_x_;
-	int size_y_;
+	Vector2 pos_;
+	Vector2 size_;
 };
 
