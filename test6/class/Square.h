@@ -7,6 +7,14 @@ class Square :
 public:
 	Square(Vector2<float> pos, Vector2<int> size);
 	//void Draw(void);
-	void Draw(float ex = 1.0f, Vector2<float> exCenter = { 0.0,0.0 }, Vector2<int> offset = {0,0}, float angle = 0.0f, int color = 0xff0000, bool line = true);
+	/// <summary>
+	/// •`‰æ
+	/// </summary>
+	/// <param name="ex">Šg‘å—¦</param>
+	/// <param name="exCenter">Šg‘å‚Ì’†SÀ•W</param>
+	/// <param name="offset">}Œ`‚ğ‚¸‚ç‚·</param>
+	/// <param name="angle">Šp“x</param>
+	/// <param name="color">F</param>
+	void Draw(float ex = 1.0f, Vector2<float> exCenter = { 0.0,0.0 }, Vector2<int> offset = {0,0}, float angle = 0.0f, int color = 0xff0000);
 };
 

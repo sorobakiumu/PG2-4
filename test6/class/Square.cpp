@@ -21,23 +21,16 @@ Vector2<float> Rotation(Vector2<float> pos,float angle) {
 	return ret;
 }
 
-void Square::Draw(float ex, Vector2<float> exCenter, Vector2<int> offset, float angle, int color , bool line)
-{
-	//DrawBox(pos_.x + exCenter.x / 2.0 * size_.x+offset.x,
-	//	pos_.y + exCenter.y / 2.0 * size_.y + offset.y,
-	//	pos_.x + exCenter.x / 2.0 * size_.x + size_.x * ex + offset.x,
-	//	pos_.y + exCenter.y / 2.0 * size_.y + size_.y * ex + offset.y,
-	//	color, line);
-	
 
+void Square::Draw(float ex, Vector2<float> exCenter, Vector2<int> offset, float angle, int color)
+{	
 	for (float x = pos_.x + exCenter.x * size_.x; x < pos_.x + exCenter.x * size_.x + size_.x*ex; x++) {
 		for (float y = pos_.y + exCenter.y * size_.y; y < pos_.y + exCenter.y * size_.y + size_.y * ex; y++) {
 			Vector2<float> tmp;
 			Vector2<float> tmpOffset;
-			tmpOffset.x = pos_.x + size_.x/2;
-			tmpOffset.y = pos_.y + size_.y/2;
-			tmp.x = Rotation(Vector2<float>( x - tmpOffset.x,y - tmpOffset.y),angle).x;
-			tmp.y = Rotation(Vector2<float>( x - tmpOffset.x,y - tmpOffset.y),angle).y;
+			tmpOffset.x = pos_.x + size_.x / 2;
+			tmpOffset.y = pos_.y + size_.y / 2;
+			tmp = Rotation(Vector2<float>(x - tmpOffset.x, y - tmpOffset.y), angle);
 			DrawPixel(tmp.x + offset.x+tmpOffset.x, tmp.y + offset.y+tmpOffset.y, color);
 		}
 	}
