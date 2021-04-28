@@ -5,7 +5,7 @@ class Square :
 	public Shape
 {
 public:
-	Square(Vector2<float> pos, Vector2<int> size);
+	Square(Vector2Temple<float> pos, Vector2Temple<int> size);
 	//void Draw(void);
 	/// <summary>
 	/// ï`âÊ
@@ -15,6 +15,6 @@ public:
 	/// <param name="offset">ê}å`ÇÇ∏ÇÁÇ∑</param>
 	/// <param name="angle">äpìx</param>
 	/// <param name="color">êF</param>
-	void Draw(float ex = 1.0f, Vector2<float> exCenter = { 0.0,0.0 }, Vector2<int> offset = {0,0}, float angle = 0.0f, int color = 0xff0000);
+	void Draw(float ex = 1.0f, Vector2Temple<float> exCenter = { 0.0,0.0 }, Vector2Temple<int> offset = {0,0}, float angle = 0.0f, int color = 0xff0000);
 };
 

@@ -39,8 +39,8 @@ int WINAPI WinMain(HINSTANCE inst, HINSTANCE prev, LPSTR, int)
 		shape1->Draw();
 		shape1->Draw(0.5f, { 0.25,0.25 }, { -50, +50 }, -angle, 0xaaaaff);
 
+
 		Illust::Instance().run();
-	
 		_dbgDraw();
 		ScreenFlip();
 		ClsDrawScreen();

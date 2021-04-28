@@ -2,7 +2,7 @@
 #include "Shape.h"
 #include "Vector2.h"
 
-Shape::Shape(Vector2<float> pos, Vector2<int> size)
+Shape::Shape(Vector2Temple<float> pos, Vector2Temple<int> size)
 {
 	pos_ = pos;
 	size_ = size;

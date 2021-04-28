@@ -4,11 +4,11 @@
 class Shape
 {
 public:
-	Shape(Vector2<float> pos, Vector2<int> size);
-	virtual void Draw(float ex = 1.0f, Vector2<float> exCenter = { 0.0,0.0 }, Vector2<int> offset = { 0,0 }, float angle = 0.0f, int color = 0xff0000)=0;
+	Shape(Vector2Temple<float> pos, Vector2Temple<int> size);
+	virtual void Draw(float ex = 1.0f, Vector2Temple<float> exCenter = { 0.0,0.0 }, Vector2Temple<int> offset = { 0,0 }, float angle = 0.0f, int color = 0xff0000)=0;
 	void Draw(void);
 protected:
-	Vector2<float> pos_;
-	Vector2<int> size_;
+	Vector2Temple<float> pos_;
+	Vector2Temple<int> size_;
 };
 

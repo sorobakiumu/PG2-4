@@ -26,11 +26,8 @@ private:
 	void operator = (const Illust&) = delete;
 
 	std::vector<std::pair<Vector2int, int>> freeDraw;
-	std::vector<std::vector<std::pair<Vector2int, int>>> freeDrawList;
-
 
 	std::vector < std::pair<Vector2int, int>> lineDraw;
-	std::vector < std::vector<std::pair<Vector2int, int>>> lineDrawList;
 
 	bool leftnow = false;
 	bool leftold = false;
@@ -38,5 +35,7 @@ private:
 	bool rightnow = false;
 	bool rightold = false;
 	int color = 0x888888;
+
+	int illustScreen;
 };
 
