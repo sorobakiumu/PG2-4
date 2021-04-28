@@ -29,8 +29,8 @@ private:
 	std::vector<std::vector<std::pair<Vector2int, int>>> freeDrawList;
 
 
-	std::pair<Vector2int, int> lineDraw[2];
-	std::vector<std::pair<Vector2int, int>[2]> lineDrawList;
+	std::vector < std::pair<Vector2int, int>> lineDraw;
+	std::vector < std::vector<std::pair<Vector2int, int>>> lineDrawList;
 
 	bool leftnow = false;
 	bool leftold = false;

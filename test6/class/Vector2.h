@@ -11,43 +11,50 @@ public:
 	T y;
 
 	//”äŠr‰‰ŽZŽq
-	bool operator==(const T val) {
-		if (x == T && y == T) {
-			return true;
-		}
-		return false;
+	bool operator==(const T val)const {
+		return (x == val && y == val);
 	}
-	bool operator!=(const T val) {
-		if (x != T && y != T) {
-			return true;
-		}
-		return false;
+	bool operator!=(const T val)const {
+		return (x != val && y != val);
 	}
-	bool operator<=(const T val) {
-		if (x <= T && y <= T) {
-			return true;
-		}
-		return false;
+	bool operator<=(const T val)const {
+		return (x <= val && y <= val);
 	}
-	bool operator>=(const T val) {
-		if (x >= T && y >= T) {
-			return true;
-		}
-		return false;
+	bool operator>=(const T val) const {
+		return (x >= val && y >= val);
 	}
-	bool operator>(const T val) {
-		if (x > T && y > T) {
-			return true;
-		}
-		return false;
+	bool operator>(const T val) const {
+		return (x > val && y > val);
 	}
-	bool operator<(const T val) {
-		if (x < T && y < T) {
-			return true;
-		}
-		return false;
+	bool operator<(const T val) const {
+		return (x < val&& y < val);
 	}
 
+	//”äŠr‰‰ŽZŽq
+	bool operator==(const Vector2 val)const {
+		return (x == val.x && y == val.y);
+	}
+	bool operator!=(const Vector2 val)const {
+		return (x != val.x && y != val.y);
+	}
+	bool operator<=(const Vector2 val)const {
+		return (x <= val.x && y <= val.y);
+	}
+	bool operator>=(const Vector2 val)const {
+		return (x >= val.x && y >= val.y);
+	}
+	bool operator>(const Vector2 val) const {
+		return (x > val.x && y > val.y);
+	}
+	bool operator<(const Vector2 val)const {
+		return (x < val.x && y < val.y);
+	}
+	//bool operator||(const T val)const {
+	//	return (x || val.x&& y || val.y);
+	//}
+	//bool operato&&(const T val)const {
+	//	return (x && val.x&& y && val.y);
+	//}
 
 
 	//‘ã“ü‰‰ŽZŽq

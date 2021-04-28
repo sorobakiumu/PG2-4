@@ -35,8 +35,9 @@ void Illust::run()
 		lineDraw[1] = { Vector2int(x, y), color };
 	}
 	if (rightnow == false && rightold == true) {
-		lineDrawList.push_back({ lineDraw[0] });
-		lineDrawList.push_back({ lineDraw[1] });
+		lineDrawList.push_back({ lineDraw });
+		lineDraw.clear();
+		lineDraw.resize(2);
 	}
 	rightold = rightnow;
 
@@ -47,18 +48,22 @@ void Illust::run()
 			}
 		}
 	}
+	//ì}I—¹‚µ‚½ü
 	for (int n = 0; n < lineDrawList.size();n++) {
 		DrawLine(lineDrawList[n][0].first.x, lineDrawList[n][0].first.y, lineDrawList[n][1].first.x, lineDrawList[n][1].first.y, lineDrawList[n][1].second, 5);
 	}
+	//ì}’†‚Ìü
 	if (freeDraw.size() > 2) {
 		for (int n = 0; n < freeDraw.size() - 1; n++) {
 			DrawLine(freeDraw[n].first.x, freeDraw[n].first.y, freeDraw[n + 1].first.x, freeDraw[n + 1].first.y, freeDraw[n].second, 5);
 		}
 	}
+	//ì}’†‚Ìü
 	if (rightnow) {
 		DrawLine(lineDraw[0].first.x, lineDraw[0].first.y, lineDraw[1].first.x, lineDraw[1].first.y, lineDraw[1].second, 5);
 	}
 
+	//íœ
 	if (CheckHitKey(KEY_INPUT_SPACE)) {
 		freeDraw.clear();
 		freeDrawList.clear();
@@ -68,4 +73,5 @@ void Illust::run()
 
 void Illust::Init()
 {
+	lineDraw.resize(2);
 }
